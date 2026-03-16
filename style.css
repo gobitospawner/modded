@@ -1,32 +1,38 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #6a0dad, #a0522d);
-  color: white;
-  font-family: 'Arial', sans-serif;
-  transition: background 0.5s;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animal Company Mod Menu Spawner</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
-.button {
-  padding: 10px 20px;
-  background-color: #4b0082;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
+<body>
 
-.button:hover {
-  background-color: #7a00b8;
-}
+<div class="container">
+<h1>Animal Company Mod Menu</h1>
+<p>Select an animal and spawn it.</p>
 
-@media (max-width: 768px) {
-  .container {
-    padding: 20px;
-    font-size: 14px;
-  }
-}
+<select id="animalSelect">
+<option value="">Select Animal</option>
+<option value="Animal A">Animal A</option>
+<option value="Animal B">Animal B</option>
+<option value="Animal C">Animal C</option>
+</select>
+
+<input type="number" id="quantity" min="1" value="1">
+
+<select id="sizeSelect">
+<option value="small">Small</option>
+<option value="medium" selected>Medium</option>
+<option value="large">Large</option>
+</select>
+
+<button class="button" id="spawnBtn">Spawn Animal</button>
+
+<p id="status"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
